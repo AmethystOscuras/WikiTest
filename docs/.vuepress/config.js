@@ -13,7 +13,25 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
 
-    navbar: ['/', '/get-started'],
+    navbar: ['/', '/factions/'],
+    sidebar: [
+      {
+        text: "Home",
+        link: "/",
+        children: [
+          "get-started"
+        ]
+      },
+      {
+        text: "Factions",
+        link: "/factions/",
+        prefix: "/factions/",
+        children: [
+          "knights/",
+          "undead/"
+        ]
+      }
+    ]
   }),
 
   bundler: viteBundler(),
